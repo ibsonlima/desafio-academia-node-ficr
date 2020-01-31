@@ -3,6 +3,8 @@ module.exports = {
     async show(req, res) {
         try {
 
+
+
             const apiGit = await axios.get('https://api.github.com/users/ibsonlima')
             const {
                 name,
@@ -22,7 +24,7 @@ module.exports = {
                 Repositorio: repos_url,
                 Avatar: avatar_url,
                 Localicazão: location
-            }
+            };
             return res.json(gitnome)
 
         } catch (error) {
@@ -30,7 +32,6 @@ module.exports = {
         }
 
 
+
     }
-
-
 }
