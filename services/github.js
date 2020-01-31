@@ -1,12 +1,9 @@
 const axios = require('axios');
 module.exports = {
-
-
-
     async show(req, res) {
         try {
 
-            const apiGit = await axios.get('https://api.github.com/users/thymendes')
+            const apiGit = await axios.get('https://api.github.com/users/ibsonlima')
             const {
                 name,
                 login,
@@ -21,8 +18,11 @@ module.exports = {
                 nome: name,
                 login: login,
                 Url: html_url,
+                Bio: bio,
+                Repositorio: repos_url,
+                Avatar: avatar_url,
+                Localicazão: location
             }
-
             return res.json(gitnome)
 
         } catch (error) {
